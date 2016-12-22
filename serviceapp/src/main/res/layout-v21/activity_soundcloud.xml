@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!--/*{
+    "version": 1,
+    "type": "rich",
+    "provider_name": "SoundCloud",
+    "provider_url": "http://soundcloud.com",
+    "height": 400,
+    "width": "100%",
+    "title": "Flickermood by Forss",
+    "description": "From the Soulhack album,&nbsp;recently featured in this ad <a href=\"https://www.dswshoes.com/tv_commercial.jsp?m=october2007\">https://www.dswshoes.com/tv_commercial.jsp?m=october2007</a> ",
+    "thumbnail_url": "http://i1.sndcdn.com/artworks-000067273316-smsiqx-t500x500.jpg",
+    "html": "<iframe width=\"100%\" height=\"400\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?visual=true&url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F293&show_artwork=true\"></iframe>",
+    "author_name": "Forss",
+    "author_url": "http://soundcloud.com/forss"
+    }*/-->
+
+
+    <TableLayout
+        android:id="@+id/tbl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp">
+
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tV_lbl_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.125"
+                android:elevation="24dp"
+                android:text="Version"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:textColor="@android:color/holo_green_dark" tools:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tV_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="version" tools:ignore="HardcodedText"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tV_lbl_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.125"
+                android:elevation="24dp"
+                android:text="Type"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:textColor="@android:color/holo_green_dark" tools:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tV_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1" android:text="type"
+                tools:ignore="HardcodedText"/>
+
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tV_lbl_provider_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp" android:layout_weight="0.125"
+                android:elevation="24dp"
+                android:text="Provider_name"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:textColor="@android:color/holo_green_dark" tools:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tV_provider_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:elevation="24dp"
+                android:text="provider_name"
+                tools:ignore="HardcodedText"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tV_lbl_author_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp" android:layout_weight="0.125"
+                android:elevation="24dp"
+                android:text="Author_Name"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:textColor="@android:color/holo_green_dark" tools:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tV_author_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="author_name" tools:ignore="HardcodedText"/>
+        </TableRow>
+    </TableLayout>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tbl_layout"
+                    android:padding="5dp">
+        <TextView
+            android:id="@+id/tV_json_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Waiting for result"
+            tools:ignore="HardcodedText"/>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/button_myRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@android:color/holo_green_dark"
+        android:elevation="14dp" android:text="Request"
+        tools:ignore="HardcodedText" tools:textColor="@android:color/background_light"/>
+
+
+</RelativeLayout>
